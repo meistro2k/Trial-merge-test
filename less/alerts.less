@@ -1,0 +1,125 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: @baseLineHeight;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  background-color: @warningBackground;
+  border: 1px solid @warningBorder;
+  .border-radius(4px);
+  color: @warningText;
+}
+<<<<<<< HEAD
+
+.alert-heading {
+    border: 0;
+    color: inherit;
+    margin: 0;
+    line-height: @baseLineHeight;
+    text-transform: none;
+    font-size: @baseFontSize + 1px;
+}
+
+/* Links */
+.alert a,
+.alert a b,
+.alert a strong {
+    color: @linkColor;
+    font-weight: bold;
+    text-decoration: underline !important;
+    &:hover {
+        color: @linkColorHover;
+    }
+=======
+.alert h4 {
+  margin: 0;
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
+}
+
+/* Buttons */
+.alert .btn {
+    color: @textColor !important;
+    text-decoration: none !important;
+    vertical-align: baseline;
+
+    &.btn-primary   { color: @white !important; }
+    &.btn-secondary { color: @brown !important; }
+}
+
+
+// Adjust close link position
+.alert .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+<<<<<<< HEAD
+  line-height: 18px;
+  text-decoration: none !important;
+=======
+  line-height: @baseLineHeight;
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
+}
+
+
+// Alternate styles
+// -------------------------
+
+.alert-success {
+  background-color: @successBackground;
+  border-color: @successBorder;
+  color: @successText;
+}
+  .alert-success strong,
+  .alert-success b {
+    color: @successText !important;
+  }
+.alert-danger,
+.alert-error {
+  background-color: @errorBackground;
+  border-color: @errorBorder;
+  color: @errorText;
+}
+  .alert-danger strong,
+  .alert-error b{
+    color: @errorText;
+  }
+.alert-info {
+  background-color: @infoBackground;
+  border-color: @infoBorder;
+  color: @infoText;
+}
+  .alert-info strong,
+  .alert-info b {
+    color: @infoText !important;
+  }
+
+
+// Block alerts
+// -------------------------
+
+.alert-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.alert-block > p,
+.alert-block > ul {
+  margin-bottom: 0;
+}
+.alert-block p + p {
+  margin-top: 5px;
+}
+
+
+// Alternate size
+// --------------
+.alert-small {
+    .border-radius(2px);
+    padding: 4px 9px;
+    margin-bottom: @baseLineHeight / 2;
+}
