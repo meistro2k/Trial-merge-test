@@ -1,0 +1,435 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core
+.btn {
+  display: inline-block;
+  .ie7-inline-block();
+<<<<<<< HEAD
+  padding: 3px 8px;
+  margin-bottom: 0; // For input.btn
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  color: @textColor;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+=======
+  padding: 4px 14px;
+  margin-bottom: 0; // For input.btn
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  *line-height: @baseLineHeight;
+  text-align: center;
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
+  vertical-align: middle;
+  cursor: pointer;
+  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, 0 1px 1px rgba(255,255,255,.75));
+  border: 1px solid @btnBorder;
+  .border-radius(3px);
+  .ie7-restore-left-whitespace(); // Give IE7 some love
+<<<<<<< HEAD
+  .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07)");
+  font-family: 'Lato';
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+// Hover state
+.btn:hover {
+  color: @textColor;
+  text-decoration: none;
+  // background-color: darken(@white, 10%);
+  *background-color: darken(@white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
+  background-position: 0 10px;
+
+  // transition is only when going to hover, otherwise the background
+  // behind the gradient (there for IE<=9 fallback) gets mismatched
+  //.transition(all .1s linear);
+}
+=======
+  .box-shadow(inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05));
+
+  // Hover state
+  &:hover {
+    color: @grayDark;
+    text-decoration: none;
+    background-color: darken(@white, 10%);
+    *background-color: darken(@white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
+    background-position: 0 -15px;
+
+    // transition is only when going to hover, otherwise the background
+    // behind the gradient (there for IE<=9 fallback) gets mismatched
+    .transition(background-position .1s linear);
+  }
+
+  // Focus state for keyboard and accessibility
+  &:focus {
+    .tab-focus();
+  }
+
+  // Active state
+  &.active,
+  &:active {
+    background-color: darken(@white, 10%);
+    background-color: darken(@white, 15%) e("\9");
+    background-image: none;
+    outline: 0;
+    .box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
+  }
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    cursor: default;
+    background-color: darken(@white, 10%);
+    background-image: none;
+    .opacity(65);
+    .box-shadow(none);
+  }
+
+<<<<<<< HEAD
+// Active state
+.btn.active,
+.btn:active {
+  //background-color: darken(@white, 10%);
+  //background-color: darken(@white, 15%) e("\9");
+  //background-image: none;
+  outline: 0;
+  .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.1)") !important;
+  background-position: 0 -10px;
+}
+
+// Disabled state
+.btn.disabled,
+.btn[disabled] {
+  cursor: default;
+  //background-color: darken(@white, 10%);
+  //background-image: none;
+  .opacity(80);
+  .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.1)");
+  background-position: 0 -10px;
+}
+
+//Icon
+.btn [class^="icon-"] {
+  .square(18px);
+  margin-top: -1px;
+  .opacity(70);
+}
+
+.btn:hover [class^="icon-"] {
+  .opacity(85);
+}
+
+.btn.active [class^="icon-"],
+.btn:active [class^="icon-"] {
+  .opacity(100);
+}
+=======
+}
+
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
+
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.btn-large {
+  padding: 5px 10px;
+  font-size: @baseFontSize + 2px;
+  line-height: @baseLineHeight + 1px;
+  //.border-radius(5px);
+}
+.btn-large [class^="icon-"] {
+  margin-top: 2px;
+}
+
+// Small
+.btn-small {
+<<<<<<< HEAD
+  padding: 3px 6px;
+  font-size: @baseFontSize - 1px;
+  line-height: @baseLineHeight - 5px;
+}
+.btn-small [class^="icon-"] {
+  margin-top: 0;
+  .square(15px);
+=======
+  padding: 3px 9px;
+  font-size: @baseFontSize - 2px;
+  line-height: @baseLineHeight - 2px;
+}
+.btn-small [class^="icon-"] {
+  margin-top: 0;
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
+}
+
+// Mini
+.btn-mini {
+<<<<<<< HEAD
+  padding: 1px 5px;
+  font-size: @baseFontSize - 2px;
+  line-height: @baseLineHeight - 4px;
+=======
+  padding: 2px 6px;
+  font-size: @baseFontSize - 3px;
+  line-height: @baseLineHeight - 3px;
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
+}
+
+// Xlarge
+.btn-xlarge {
+  padding: 5px;
+  min-width: 55px;
+  font-size: @baseFontSize + 7px;
+  font-family: @baseFontFamily;
+  line-height: @baseLineHeight - 2px;
+}
+
+  .btn-xlarge span,
+  .btn-xlarge small {
+    display: block;
+    font-size: @baseFontSize - 2px;
+    font-weight: normal;
+    line-height: @baseLineHeight - 8px;
+    margin-top: 3px;
+  }
+
+
+// Block button
+// -------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  .box-sizing(border-box);
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+<<<<<<< HEAD
+// Set text color, borders and shadows
+// -------------------------
+.btn-primary,
+.btn-primary:hover,
+.btn-danger,
+.btn-danger:hover,
+.btn-info,
+.btn-info:hover,
+.btn-inverse,
+.btn-inverse:hover {
+  color: @white;
+  text-shadow: 0 1px 0 rgba(0,0,0,.2);
+}
+
+.btn-primary,
+.btn-primary:hover {
+  border-color: @btnPrimaryBorder !important;
+  .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1)");
+}
+
+.btn-secondary,
+.btn-secondary:hover {
+  color: @brown !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.25);
+  border-color: @btnSecondaryBorder !important;
+  .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.4), 0 1px 0 rgba(0,0,0,.12)");
+}
+
+.btn-success,
+.btn-success:hover {
+  color: @greenDark !important;
+  border-color: @btnSuccessBorder !important;
+  .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.4), 0 1px 0 rgba(0,0,0,.07)");
+}
+
+
+=======
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
+// Provide *some* extra contrast for those who can get it
+.btn-danger.active,
+.btn-info.active,
+.btn-inverse.active {
+  color: rgba(255,255,255,.75);
+}
+
+// Set the backgrounds
+// -------------------------
+.btn {
+  // reset here as of 2.0.3 due to Recess property order
+<<<<<<< HEAD
+  border-color: @btnBorder;
+  //border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+=======
+  border-color: #c5c5c5;
+  border-color: rgba(0,0,0,.15) rgba(0,0,0,.15) rgba(0,0,0,.25);
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
+}
+.btn-primary {
+  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+}
+.btn-secondary {
+  .buttonBackground(@btnSecondaryBackground, @btnSecondaryBackgroundHighlight);
+}
+// Warning appears are orange
+.btn-warning {
+  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
+}
+// Danger and error appear as red
+.btn-danger {
+  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+}
+// Success appears as green
+.btn-success {
+  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+}
+// Info appears as a neutral blue
+.btn-info {
+  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
+}
+// Inverse appears as dark gray
+.btn-inverse {
+  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+}
+
+
+// Cross-browser Jank
+// --------------------------------------------------
+
+/***** IE7 hack *****/
+html* {
+    button.btn,
+    input[type="submit"].btn,
+    input[type="button"].btn {
+        filter:chroma(color=#000000); /*removes extra black border*/
+        padding: 2px 7px 0;
+        &.btn-small {
+            padding: 2px 5px 1px;
+        }
+        &.btn-large {
+            padding: 1px 9px 4px;
+        }
+    }
+}
+
+button.btn,
+input[type="submit"].btn,
+input[type="button"].btn {
+    /***** Firefox hacks *****/
+    &::-moz-focus-inner {
+        padding: 0;
+    }
+    &.btn-small {
+        &::-moz-focus-inner {
+            padding: 0;
+        }
+    }
+    &.btn-large {
+        &::-moz-focus-inner {
+            padding: 0px;
+        }
+    }
+}
+
+
+<<<<<<< HEAD
+// Create a button that look like a link
+// -------------------------------------
+.btn-none,
+.btn-none:active {
+    background: none !important;
+    border: 0 !important;
+    .border-radius(none) !important;
+    .box-shadow(none) !important;
+    color: @linkColor !important;
+    #font > .sans-serif();
+    margin: 0 !important;
+    padding: 0 !important;
+    .caret {
+        border-top-color: @linkColor !important;
+        border-width: 3px;
+        margin: 9px 0 0 3px !important;
+        .opacity(100) !important;
+    }
+}
+    .btn-none:hover,
+    .open .btn-none {
+        color: @linkColorHover !important;
+        text-decoration: underline;
+        .caret {
+            border-top-color: @linkColorHover !important;
+        }
+    }
+=======
+  // IE7 has some default padding on button controls
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+
+  &.btn-large {
+    *padding-top: 7px;
+    *padding-bottom: 7px;
+  }
+  &.btn-small {
+    *padding-top: 3px;
+    *padding-bottom: 3px;
+  }
+  &.btn-mini {
+    *padding-top: 1px;
+    *padding-bottom: 1px;
+  }
+}
+
+
+// Link buttons
+// --------------------------------------------------
+
+// Make a button look and behave like a link
+.btn-link,
+.btn-link:active,
+.btn-link[disabled] {
+  background-color: transparent;
+  background-image: none;
+  .box-shadow(none);
+}
+.btn-link {
+  border-color: transparent;
+  cursor: pointer;
+  color: @linkColor;
+  .border-radius(0);
+}
+.btn-link:hover {
+  color: @linkColorHover;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.btn-link[disabled]:hover {
+  color: @grayDark;
+  text-decoration: none;
+}
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
