@@ -1,0 +1,84 @@
+// PAGINATION
+// ----------
+
+.pagination {
+  border-top: 1px solid @grayLight;
+  height: @baseLineHeight * 2;
+  padding: @baseLineHeight 0;
+  clear: both;
+  width: 100%;
+ }
+ 
+  .pagination ul {
+    display: inline-block;
+    .ie7-inline-block();
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  
+    .pagination li {
+      display: inline;
+      margin-left: 2px;
+    }
+    
+      .pagination li.text {
+          vertical-align:bottom;
+      }
+
+      .pagination a,
+      .pagination span {
+        .btn;
+        font-family: @baseFontFamily;
+        text-decoration: none;
+      }
+      
+        .pagination a:hover {
+          background-color: #fcfcfc;
+          background-position: 0 10px;
+        }
+
+        .pagination a:active {
+          background-color: @grayLighter;
+          background-position: 0 -10px;
+          @shadow: inset 0 1px 1px rgba(0,0,0,.1);
+          .box-shadow(@shadow);
+        }
+      
+        .pagination .active a,
+        .pagination .active span {
+          #gradient > .vertical(@green, #62a91e);
+          border-color: darken(@green, 10%);
+          @shadow: inset 0 1px 1px rgba(0,0,0,.15);
+          .box-shadow(@shadow);
+          color: @white;
+          cursor: default;
+          text-shadow: 0 -1px 0 darken(@green, 10%);
+        }
+
+        .pagination .disabled span,
+        .pagination .disabled a,
+        .pagination .disabled a:hover {
+        }
+
+// Centered
+.pagination-centered {
+  text-align: center;
+}
+
+// Right
+.pagination-right {
+  text-align: right;
+}
+
+
+/***** IE7 Hacks *****/
+html* {
+    .pagination {
+        position: relative;
+    }
+        .pagination p {
+            line-height: @baseLineHeight + 8;
+            left: 0;
+            position: absolute;
+        }
+}
