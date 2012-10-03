@@ -1,8 +1,11 @@
-// MODALS
-// ------
+//
+// Modals
+// --------------------------------------------------
 
-// Recalculate z-index where appropriate
-.modal-open {
+
+// Recalculate z-index where appropriate,
+// but only apply to elements within modal
+.modal-open .modal {
   .dropdown-menu {  z-index: @zindexDropdown + @zindexModal; }
   .dropdown.open { *z-index: @zindexDropdown + @zindexModal; }
   .popover       {  z-index: @zindexPopover  + @zindexModal; }
@@ -55,10 +58,17 @@
   .clearfix;
   // Close icon
   .close { margin-top: 2px; }
+<<<<<<< HEAD
   h3 {
     float: left;
     margin: 0;
     line-height: 27px;
+=======
+  // Heading
+  h3 {
+    margin: 0;
+    line-height: 30px;
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
   }
 }
 

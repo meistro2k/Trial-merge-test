@@ -1,7 +1,11 @@
-// ALERT STYLES
-// ------------
+//
+// Alerts
+// --------------------------------------------------
 
-// Base alert styles
+
+// Base styles
+// -------------------------
+
 .alert {
   padding: 8px 35px 8px 14px;
   margin-bottom: @baseLineHeight;
@@ -11,6 +15,7 @@
   .border-radius(4px);
   color: @warningText;
 }
+<<<<<<< HEAD
 
 .alert-heading {
     border: 0;
@@ -31,6 +36,10 @@
     &:hover {
         color: @linkColorHover;
     }
+=======
+.alert h4 {
+  margin: 0;
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
 }
 
 /* Buttons */
@@ -49,16 +58,21 @@
   position: relative;
   top: -2px;
   right: -21px;
+<<<<<<< HEAD
   line-height: 18px;
   text-decoration: none !important;
+=======
+  line-height: @baseLineHeight;
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
 }
 
+
 // Alternate styles
-// ----------------
+// -------------------------
 
 .alert-success {
   background-color: @successBackground;
-  border-color: @successBorder;  
+  border-color: @successBorder;
   color: @successText;
 }
   .alert-success strong,
@@ -85,8 +99,10 @@
     color: @infoText !important;
   }
 
+
 // Block alerts
-// ------------------------
+// -------------------------
+
 .alert-block {
   padding-top: 14px;
   padding-bottom: 14px;

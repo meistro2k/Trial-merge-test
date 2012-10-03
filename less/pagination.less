@@ -1,5 +1,7 @@
-// PAGINATION
-// ----------
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+
 
 .pagination {
   border-top: 1px solid @grayLight;
@@ -8,6 +10,7 @@
   clear: both;
   width: 100%;
  }
+<<<<<<< HEAD
  
   .pagination ul {
     display: inline-block;
@@ -59,6 +62,55 @@
         .pagination .disabled a,
         .pagination .disabled a:hover {
         }
+=======
+.pagination ul {
+  display: inline-block;
+  .ie7-inline-block();
+  margin-left: 0;
+  margin-bottom: 0;
+  .border-radius(3px);
+  .box-shadow(0 1px 2px rgba(0,0,0,.05));
+}
+.pagination ul > li {
+  display: inline;
+}
+.pagination ul > li > a,
+.pagination ul > li > span {
+  float: left;
+  padding: 0 14px;
+  line-height: (@baseLineHeight * 2) - 2;
+  text-decoration: none;
+  background-color: @paginationBackground;
+  border: 1px solid @paginationBorder;
+  border-left-width: 0;
+}
+.pagination ul > li > a:hover,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  background-color: #f5f5f5;
+}
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  color: @grayLight;
+  cursor: default;
+}
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover {
+  color: @grayLight;
+  background-color: transparent;
+  cursor: default;
+}
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span {
+  border-left-width: 1px;
+  .border-radius(3px 0 0 3px);
+}
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
+  .border-radius(0 3px 3px 0);
+}
+>>>>>>> c52368d3c5984b28e6a71e5e1240afdd788fc2e6
 
 // Centered
 .pagination-centered {
